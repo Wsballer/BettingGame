@@ -17,6 +17,7 @@ namespace BettingGame
                 player.WriteMyInfo();
                 Console.Write("How much do you want to bet: ");
                 string howMuch = Console.ReadLine();
+                if (howMuch == "") return;
                 if (int.TryParse(howMuch, out int amount))
                 {
                     int pot = amount * 2;
